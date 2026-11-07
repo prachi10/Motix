@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#060913" />
+      <stop offset="50%" stop-color="#0B132B" />
+      <stop offset="100%" stop-color="#050811" />
+    </linearGradient>
+    <linearGradient id="shieldBorder" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00D2FF" />
+      <stop offset="40%" stop-color="#3B82F6" />
+      <stop offset="70%" stop-color="#1D4ED8" />
+      <stop offset="100%" stop-color="#06B6D4" />
+    </linearGradient>
+    <linearGradient id="coreGlow" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8" />
+      <stop offset="50%" stop-color="#0284C7" />
+      <stop offset="100%" stop-color="#0369A1" />
+    </linearGradient>
+    <linearGradient id="silverAccent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="50%" stop-color="#94A3B8" />
+      <stop offset="100%" stop-color="#334155" />
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="16" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Background base rounded rectangle with safe zone -->
+  <rect width="512" height="512" rx="112" fill="url(#bgGrad)" />
+  <rect width="508" height="508" x="2" y="2" rx="110" fill="none" stroke="url(#shieldBorder)" stroke-width="2.5" opacity="0.4" />
+
+  <!-- Shield Shape Outline -->
+  <g transform="translate(0, 0)">
+    <!-- Outer Shield Halo -->
+    <path d="M 256 68 
+             C 340 68, 404 90, 422 136 
+             C 426 230, 396 346, 256 444 
+             C 116 346, 86 230, 90 136 
+             C 108 90, 172 68, 256 68 Z" 
+          fill="none" 
+          stroke="url(#shieldBorder)" 
+          stroke-width="12" 
+          stroke-linejoin="round"
+          filter="url(#glow)" />
+
+    <!-- Inner Shield Body -->
+    <path d="M 256 86 
+             C 328 86, 384 105, 400 145 
+             C 403 226, 376 328, 256 416 
+             C 136 328, 109 226, 112 145 
+             C 128 105, 184 86, 256 86 Z" 
+          fill="#0C152C" 
+          fill-opacity="0.9"
+          stroke="#1E293B" 
+          stroke-width="3" />
+
+    <!-- Cyber Circuit Nodes -->
+    <circle cx="256" cy="112" r="6" fill="#00D2FF" />
+    <path d="M 256 118 L 256 160" stroke="#00D2FF" stroke-width="3" stroke-linecap="round" opacity="0.8" />
+    
+    <circle cx="150" cy="190" r="5" fill="#38BDF8" opacity="0.7" />
+    <path d="M 150 195 L 180 230" stroke="#38BDF8" stroke-width="2" opacity="0.5" />
+
+    <circle cx="362" cy="190" r="5" fill="#38BDF8" opacity="0.7" />
+    <path d="M 362 195 L 332 230" stroke="#38BDF8" stroke-width="2" opacity="0.5" />
+
+    <!-- The MOTIX Geometric 'M' Vault Shackle & Keyhole Emblem -->
+    <!-- Vault Shackle Top Arc -->
+    <path d="M 206 200 
+             C 206 172, 306 172, 306 200 
+             L 306 220 
+             L 282 220 
+             L 282 202 
+             C 282 188, 230 188, 230 202 
+             L 230 220 
+             L 206 220 Z" 
+          fill="url(#silverAccent)" />
+
+    <!-- Stylized 'M' Facets forming the Vault Core -->
+    <path d="M 168 340 
+             L 168 220 
+             L 214 220 
+             L 256 288 
+             L 298 220 
+             L 344 220 
+             L 344 340 
+             L 306 340 
+             L 306 272 
+             L 272 324 
+             L 240 324 
+             L 206 272 
+             L 206 340 Z" 
+          fill="url(#coreGlow)" 
+          stroke="url(#shieldBorder)" 
+          stroke-width="3" />
+
+    <!-- Central Glowing Keyhole / Core Node -->
+    <circle cx="256" cy="242" r="14" fill="#FFFFFF" filter="url(#glow)" />
+    <polygon points="251,248 261,248 265,268 247,268" fill="#FFFFFF" />
+
+    <!-- Subtle MOTIX Tech Micro Lines -->
+    <line x1="200" y1="365" x2="312" y2="365" stroke="#38BDF8" stroke-width="4" stroke-linecap="round" opacity="0.8" />
+    <circle cx="256" cy="385" r="4" fill="#00D2FF" />
+  </g>
+</svg>

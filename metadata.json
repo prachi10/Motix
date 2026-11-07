@@ -1,0 +1,6 @@
+{
+  "name": "MOTIX – Personal Digital Security Vault",
+  "description": "Premium, futuristic, mobile-first personal digital security vault by Moti Technologies. Local-first AES-256-GCM encrypted vault for photos, videos, passwords, documents, and private notes.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
